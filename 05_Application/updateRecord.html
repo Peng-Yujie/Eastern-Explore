@@ -1,21 +1,31 @@
 ﻿<!DOCTYPE html>
-<!--(c) Saeed Mirjalili-->
+<!--
+    (C) Saeed Mirjalili
+    Group 16:Hiking Events Organizer Company 
+    Yujie Peng (MySQL Expert) ypeng24@mylangara.ca 
+    Trung Hieu Phan (MS SQL Server Expert) tphan30@mylangara.ca
+-->
 <!--Update a Record in a Table-->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta charset="utf-8" />
-    <title>Update a Record in a Table</title>
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <p>Update the name of a student, given their student ID:</p>
-    <form method="post" action="php/updateRecord.php">
-      <label>Student ID</label> <input type="number" name="stdId" /> <br />
-      <p>Change the name to:</p>
-      <label>Name</label><input type="text" name="sname" /> <br />
-      <br />
-      <input type="submit" value="Submit" />
-    </form>
-    <a href='index.html'>Back to the Homepage</a>
-  </body>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Update a Record in a Table</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <p>Update the name of an employee, given their social insurance number:</p>
+  <form method="post" action="php/updateRecord.php">
+    <label>SIN</label> <input type="number" name="SIN" /> <br />
+    <p>Change the name to:</p>
+    <label>First Name</label><input type="text" name="firstname" /> <br />
+    <br />
+    <label>Last Name</label><input type="text" name="lastname" /> <br />
+    <br />
+    <input type="submit" value="Submit" />
+  </form>
+  <a href='index.html'>Back to the Homepage</a>
+</body>
+
 </html>

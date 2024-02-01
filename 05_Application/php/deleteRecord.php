@@ -1,5 +1,10 @@
 <!doctype html>
-<!-- (C) Saeed Mirjalili -->
+<!--
+    (C) Saeed Mirjalili
+    Group 16:Hiking Events Organizer Company 
+    Yujie Peng (MySQL Expert) ypeng24@mylangara.ca 
+    Trung Hieu Phan (MS SQL Server Expert) tphan30@mylangara.ca
+-->
 <html>
 <head>
     <title>Delete a record of a table</title>
@@ -27,9 +32,9 @@ the code in catch-block is executed. */
     }
 
     try {
-        $sql = "DELETE FROM $dbname.Student WHERE StdID = :stid";
+        $sql = "DELETE FROM $dbname.Employees WHERE SIN = :sin";
         $stmnt = $conn->prepare($sql);     // read about prepared statements here: https://www.w3schools.com/php/php_mysql_prepared_statements.asp
-        $stmnt->bindParam(':stid', $_POST['stdId']);   // :stdId is the variable that we used in $sql, there must be a colon (:) in front of it.
+        $stmnt->bindParam(':sin', $_POST['SIN']);   // :stdId is the variable that we used in $sql, there must be a colon (:) in front of it.
         //  stdId in $_POST['stdId'] is the name of the element in HTML Form. Make sure it matches exactly the name of the form element in HTML 
 
         $stmnt->execute();

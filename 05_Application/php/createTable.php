@@ -1,5 +1,10 @@
 <!doctype html>
-<!-- (C) Saeed Mirjalili -->
+<!--
+    (C) Saeed Mirjalili
+    Group 16:Hiking Events Organizer Company 
+    Yujie Peng (MySQL Expert) ypeng24@mylangara.ca 
+    Trung Hieu Phan (MS SQL Server Expert) tphan30@mylangara.ca
+-->
 <html>
 <head>
 	<title>Create a Table</title>
@@ -27,14 +32,12 @@ the code in catch-block is executed. */
 		echo "<p style='color:red'>Connection Failed: " . $err->getMessage() . "</p>\r\n";
 	}
 
-	$sql = "CREATE TABLE Student (
-		StdID CHAR(10),
-		SName  VARCHAR(30),
-		BirthDate DATE,
-		Gender CHAR(1),
-		Department CHAR(4),
-		PRIMARY KEY (StdID)
-	);";
+	$sql = "CREATE TABLE Employees(
+		SIN INT PRIMARY KEY,
+			FirstName VARCHAR(20) NOT NULL,
+			LastName VARCHAR(20) NOT NULL,
+			Expertise VARCHAR(50)
+	)";
 
 	try {
 		$conn->exec($sql);

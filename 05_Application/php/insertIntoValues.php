@@ -1,5 +1,10 @@
 <!doctype html>
-<!-- (C) Saeed Mirjalili -->
+<!--
+    (C) Saeed Mirjalili
+    Group 16:Hiking Events Organizer Company 
+    Yujie Peng (MySQL Expert) ypeng24@mylangara.ca 
+    Trung Hieu Phan (MS SQL Server Expert) tphan30@mylangara.ca
+-->
 <html>
 <head>
 	<title>Insert Data Into a Database</title>
@@ -27,13 +32,12 @@ catch (PDOException $err) {
 }
 
 try {
-	$sql="INSERT INTO Student (StdID, SName, BirthDate, Gender, Department) VALUES (:stid, :sn, :bd, :gen, :dpt);";   // all the variable names must start with a colon (:)
+	$sql="INSERT INTO Employees (SIN, FirstName, LastName, Expertise) VALUES (:sin, :fn, :ln, :ep);";   // all the variable names must start with a colon (:)
 	$stmnt = $conn->prepare($sql);    // read about prepared statement here: https://www.w3schools.com/php/php_mysql_prepared_statements.asp
-	$stmnt->bindParam(':stid', $_POST['stdId']);   // stdId in $_POST['stdId'] in the exact name of the input element in HTML. if any typo, your code does not work   
-	$stmnt->bindParam(':sn', $_POST['sname']);   // note the single quotes, If you forget to put single quotes, your code does not work.
-	$stmnt->bindParam(':bd', $_POST['bdate']);
-	$stmnt->bindParam(':gen', $_POST['gender']);
-	$stmnt->bindParam(':dpt', $_POST['dept']);
+	$stmnt->bindParam(':sin', $_POST['SIN']);   // stdId in $_POST['stdId'] in the exact name of the input element in HTML. if any typo, your code does not work   
+	$stmnt->bindParam(':fn', $_POST['firstname']);   // note the single quotes, If you forget to put single quotes, your code does not work.
+	$stmnt->bindParam(':ln', $_POST['lastname']);
+	$stmnt->bindParam(':ep', $_POST['expertise']);
 
 	$stmnt->execute();
 

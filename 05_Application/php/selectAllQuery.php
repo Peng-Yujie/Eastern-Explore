@@ -1,5 +1,10 @@
 <!doctype html>
-<!-- (C) Saeed Mirjalili -->
+<!--
+    (C) Saeed Mirjalili
+    Group 16:Hiking Events Organizer Company 
+    Yujie Peng (MySQL Expert) ypeng24@mylangara.ca 
+    Trung Hieu Phan (MS SQL Server Expert) tphan30@mylangara.ca
+-->
 <html>
 <head>
     <title>Display Records of a table</title>
@@ -23,7 +28,7 @@
     }
 
     try {
-        $sql = "SELECT  StdID,SName,BirthDate,Gender,Department FROM Student";
+        $sql = "SELECT SIN,FirstName,LastName,Expertise FROM Employees";
         $stmnt = $conn->prepare($sql);    // read about prepared statement here: https://www.w3schools.com/php/php_mysql_prepared_statements.asp
 
         $stmnt->execute();
@@ -31,9 +36,9 @@
         $row = $stmnt->fetch();  // fetches the first row of the table
         if ($row) {      // if there is any result from the query
             echo '<table>';
-            echo '<tr> <th>StudentID</th> <th>Name</th> <th>Birth Date</th> <th>Gender</th> <th>Department</th> </tr>';
+            echo '<tr> <th>SIN</th> <th>FirstName</th> <th>LastName</th> <th>Expertise</th> </tr>';
             do {
-                echo "<tr><td>$row[StdID]</td><td>$row[SName]</td><td>$row[BirthDate]</td><td>$row[Gender]</td><td>$row[Department]</td></tr>";
+                echo "<tr><td>$row[SIN]</td><td>$row[FirstName]</td><td>$row[LastName]</td><td>$row[Expertise]</td></tr>";
             } while ($row = $stmnt->fetch());     // fetches another row from the query result, until we reach to the end of the result
             echo '</table>';
         } else {

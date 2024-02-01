@@ -1,43 +1,57 @@
 ﻿<!DOCTYPE html>
-<!--(c) Saeed Mirjalili-->
-<!--Update a Record in a Table-->
+<!--
+    (C) Saeed Mirjalili
+    Group 16:Hiking Events Organizer Company 
+    Yujie Peng (MySQL Expert) ypeng24@mylangara.ca 
+    Trung Hieu Phan (MS SQL Server Expert) tphan30@mylangara.ca
+-->
+<!--Select Records in a Table-->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta charset="utf-8" />
-    <title>Update a Record in a Table</title>
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <form method="post" action="php/selectAllQuery.php">
-      <fieldset>
-        <legend>Display All Students</legend>
-        <br />
-        <br />
-        <input type="submit" value="Submit" />
-      </fieldset>
-    </form>
-    <br />
-    <br />
-    <form method="post" action="php/selectLikeQuery.php">
-      <fieldset>
-        <legend>Display Students whose name starts with</legend>
-        <label>Student Name Starts with</label>
-        <input type="text" name="sname" /> <br />
-        <br />
-        <input type="submit" value="Submit" />
-      </fieldset>
-    </form>
 
-    <br />
-    <br />
-    <form method="post" action="php/selectWhereQuery.php">
-      <fieldset>
-        <legend>Display Students From a Specific Department</legend>
-        <label>Department Name</label> <input type="text" name="dept" /> <br />
-        <br />
-        <input type="submit" value="Submit" />
-      </fieldset>
-    </form>
-    <a href='index.html'>Back to the Homepage</a>
-  </body>
+<head>
+  <meta charset="utf-8" />
+  <title>Select Records in a Table</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <form method="post" action="php/selectAllQuery.php">
+    <fieldset>
+      <legend>Display All Employees</legend>
+      <br />
+      <br />
+      <input type="submit" value="Submit" />
+    </fieldset>
+  </form>
+  <br />
+  <br />
+  <form method="post" action="php/selectLikeQuery.php">
+    <fieldset>
+      <legend>Display Employees whose first name starts with</legend>
+      <label>First Name Starts with</label>
+      <input type="text" name="fname" /> <br />
+      <br />
+      <input type="submit" value="Submit" />
+    </fieldset>
+  </form>
+
+  <br />
+  <br />
+  <form method="post" action="php/selectWhereQuery.php">
+    <fieldset>
+      <legend>Display Employees who has a Specific Expertise</legend>
+      <label>Expertise</label>
+      <select name="expertise" id="expertise">
+        <option value="Planning">Planning</option>
+        <option value="Pace">Pace</option>
+        <option value="First Aid">First Aid</option>
+      </select>
+      <br />
+      <br />
+      <input type="submit" value="Submit" />
+    </fieldset>
+  </form>
+  <a href='index.html'>Back to the Homepage</a>
+</body>
+
 </html>
